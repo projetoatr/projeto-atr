@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seu Produto Digital | Página Oficial</title>
+
+  <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0061ff, #60efff);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #e0e0e0;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero img {
+      max-width: 350px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #f2f2f2;
+    }
+
+    .btn {
+      margin-top: 30px;
+      background: #fff;
+      color: #0061ff;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #0061ff;
+      color: #fff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      background: #fff;
+      color: #333;
+    }
+
+    section h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .benefit-box {
+      background: #f4f4f4;
+      padding: 30px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .benefit-box:hover {
+      background: #e8f0fe;
+      transform: translateY(-5px);
+    }
+
+    /* Depoimentos */
+    .testimonials {
+      background: #f9f9f9;
+      color: #333;
+      padding: 60px 20px;
+    }
+
+    .testimonials h3 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .testimonial strong {
+      display: block;
+      color: #0061ff;
+      font-weight: 600;
+    }
+
+    /* Garantia / Chamada */
+    .garantia {
+      background: #0061ff;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .garantia h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .garantia p {
+      max-width: 600px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+
+    /* Formulário */
+    .form-section {
+      background: #fff;
+      color: #333;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input {
+      padding: 12px;
+      border: 2px solid #0061ff;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    input[type="submit"] {
+      background: #0061ff;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: #0046c9;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Nome do Seu Produto ou Serviço</h1>
+    <p>A solução perfeita para transformar seu dia a dia e alcançar seus objetivos.</p>
+  </header>
+
+  <div class="hero fade-in">
+    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437e0?auto=format&fit=crop&w=800&q=80" alt="Produto digital" />
+    <h2>Apresente seu produto de forma irresistível</h2>
+    <p>Mostre o valor do seu produto digital, curso, serviço ou loja online. Uma mensagem clara e atraente é o primeiro passo para converter visitantes em clientes.</p>
+    <a href="#comprar" class="btn">Quero Saber Mais</a>
+  </div>
+
+  <section id="beneficios" class="fade-in">
+    <h3>Por que escolher este produto?</h3>
+    <div class="benefits">
+      <div class="benefit-box">
+        <h4>⭐ Qualidade Garantida</h4>
+        <p>Conteúdo, suporte e entrega de alta qualidade para garantir a melhor experiência ao cliente.</p>
+      </div>
+      <div class="benefit-box">
+        <h4>⚡ Resultados Rápidos</h4>
+        <p>Feito para gerar impacto real — desde o primeiro dia de uso ou acesso.</p>
+      </div>
+      <div class="benefit-box">
+        <h4>💼 Confiabilidade</h4>
+        <p>Equipe experiente, metodologia testada e milhares de clientes satisfeitos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials fade-in">
+    <h3>O que nossos clientes dizem</h3>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p>"Excelente produto! Superou minhas expectativas e o suporte é sensacional."</p>
+        <strong>— Mariana Lopes</strong>
+      </div>
+      <div class="testimonial">
+        <p>"Comprei, usei e recomendo. Simples, prático e com ótimo custo-benefício."</p>
+        <strong>— Felipe Santos</strong>
+      </div>
+      <div class="testimonial">
+        <p>"O atendimento é incrível e o produto realmente entrega o que promete."</p>
+        <strong>— Júlia Ferreira</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="garantia fade-in">
+    <h3>Garanta sem riscos</h3>
+    <p>Ofereça uma política de garantia ou satisfação para passar segurança ao cliente.  
+       Pode ser garantia de 7 dias, suporte vitalício ou devolução simples.</p>
+    <a href="#comprar" class="btn">Quero Adquirir Agora</a>
+  </section>
+
+  <section class="form-section fade-in">
+    <h3>Receba novidades e promoções</h3>
+    <p>Cadastre-se e receba no seu e-mail novidades, descontos e lançamentos exclusivos.</p>
+    <form onsubmit="alert('Cadastro realizado com sucesso!'); return false;">
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
+      <input type="submit" value="Cadastrar" />
+    </form>
+  </section>
+
+  <section id="comprar" style="background:#0061ff; color:#fff;" class="fade-in">
+    <h3>Adquira agora mesmo</h3>
+    <p>Garanta seu acesso ou adquira seu produto com segurança e rapidez.</p>
+    <a href="https://wa.me/5581999999999" target="_blank" class="btn" style="background:#fff; color:#0061ff;">Comprar Agora</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Sua Marca — Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const elements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
